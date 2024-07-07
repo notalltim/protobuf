@@ -49,6 +49,9 @@ option(protobuf_WITH_ZLIB "Build with zlib support" ${protobuf_WITH_ZLIB_DEFAULT
 set(protobuf_DEBUG_POSTFIX "d"
   CACHE STRING "Default debug postfix")
 mark_as_advanced(protobuf_DEBUG_POSTFIX)
+set(protobuf_SYSTEM_NAME ${CMAKE_SYSTEM_NAME}
+  CACHE STRING "Override cmake system name")
+mark_as_advanced(protobuf_SYSTEM_NAME)
 
 if(WITH_PROTOC)
   set(protobuf_PROTOC_EXE protoc)
