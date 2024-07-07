@@ -23,7 +23,7 @@ endif()
 if(protobuf_LINK_LIBATOMIC)
   target_link_libraries(libprotobuf PRIVATE atomic)
 endif()
-if(${CMAKE_SYSTEM_NAME} STREQUAL "Android")
+if(${protobuf_SYSTEM_NAME} STREQUAL "Android")
   target_link_libraries(libprotobuf PRIVATE log)
 endif()
 target_include_directories(libprotobuf PUBLIC
